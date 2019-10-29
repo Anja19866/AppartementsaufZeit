@@ -1,0 +1,69 @@
+
+.wrapper_uhr {
+    grid-area: uhr;
+    max-width: 760px;
+    width: 80%; 
+    margin: 0 auto;
+    border-radius: 100%;
+    border: 9px solid $darkcolor; 
+    overflow: hidden;
+    position: relative;
+}
+
+.sec1, .sec2, .sec3, .sec4 {
+    z-index: 0;
+    width: 50%;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+}
+
+.sec1:hover {
+    +.sec2 +.sec3+.sec4+.zeiger {
+        transform: translateX(-50%) rotate(360deg);   
+    }
+}
+
+.sec2:hover {
+    +.sec3+.sec4+.zeiger {
+        transform: translateX(-50%) rotate(30deg);   
+    }
+}
+
+.sec3:hover {
+    +.sec4+.zeiger {
+        transform: translateX(-50%) rotate(210deg);   
+    }
+}
+
+.sec4:hover {
+    +.zeiger {
+        transform: translateX(-50%) rotate(120deg);   
+    }
+}
+
+.pict1, .pict2, .pict3, .pict4 {
+    width: 100%;
+    height: 100%;
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.zeiger {
+    border-radius: 125% 125% 100% 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 50%;
+    width: 20px;
+    background-color: $darkcolor;
+    transform: translateX(-50%) rotate(20deg);
+    z-index: 5;
+    transform-origin: center bottom;
+    transition: transform ease 600ms;
+}

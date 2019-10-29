@@ -1,0 +1,47 @@
+
+h1 {
+    font-size: 3.7em;
+    font-variant: small-caps;
+    text-align: center;
+    }
+
+@media (max-width: 767px) { h1 { font-size: 2.7em;} h2 {font-size: 2em;}}
+
+
+h2 {
+    font-size: 2.8em;     
+    font-variant: small-caps;
+    text-align: center;
+}
+
+h3 {
+    
+    font-variant: small-caps;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.list {
+        padding-left: 0;
+        margin-left: -10px;
+
+    li {
+        list-style: none;
+        position: relative;
+        padding-left: 30px;
+        display: inline-block;
+        
+        &:before {
+            content: '\25b8';
+            position: absolute;
+            left: 8px;
+        }
+    }
+}

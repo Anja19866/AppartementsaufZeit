@@ -1,0 +1,46 @@
+
+.kontakt div {
+    clear: both;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.kontakt div label {
+    flex: 0 0 8em;
+    padding: 4px 0;
+    text-align: left;
+
+}
+
+/*Alle Formularfelder außer Button*/
+
+.kontakt select,
+.kontakt input,
+.kontakt textarea {
+    flex: 1 1 20em;
+    padding: 4px;
+    font-family: calibri;
+    font-size: 0.9em;
+    border: 1px solid $outlineForm;
+    font-style: italic; 
+    border-radius: 5px; 
+}
+
+.kontakt select:focus,
+.kontakt input:focus,
+.kontakt textarea:focus,
+.kontakt button:focus {
+    background-color:$bgForm;
+    outline-color: $outlineForm;
+
+}
+
+.kontakt button  {
+    border: 1px solid $outlineForm;
+    border-radius: 5px; 
+    font-size: 1.1em;
+}
